@@ -1,0 +1,363 @@
+/* FitLife Wellness Intelligence - Futuristic Sci-Fi Cyberpunk Health Dashboard Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-dark: #040711;
+    --card-bg: rgba(10, 16, 35, 0.75);
+    --border-cyan: rgba(0, 242, 254, 0.4);
+    --border-orange: rgba(255, 107, 53, 0.4);
+    --border-purple: rgba(138, 43, 226, 0.4);
+    --border-blue: rgba(0, 198, 255, 0.4);
+    --glow-cyan: 0 0 20px rgba(0, 242, 254, 0.25);
+    --glow-orange: 0 0 20px rgba(255, 107, 53, 0.25);
+    --glow-purple: 0 0 20px rgba(138, 43, 226, 0.25);
+    --glow-blue: 0 0 20px rgba(0, 198, 255, 0.25);
+}
+
+/* Main App Container Background */
+.stApp {
+    background-color: #040711;
+    background-image: 
+        radial-gradient(at 15% 15%, rgba(0, 242, 254, 0.08) 0px, transparent 45%),
+        radial-gradient(at 85% 20%, rgba(138, 43, 226, 0.08) 0px, transparent 45%),
+        radial-gradient(at 50% 85%, rgba(255, 107, 53, 0.08) 0px, transparent 45%),
+        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #e2e8f0;
+}
+
+/* Top Header Bar */
+header[data-testid="stHeader"] {
+    background: rgba(4, 7, 17, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(0, 242, 254, 0.15) !important;
+}
+
+/* Sidebar Sci-Fi Styling */
+section[data-testid="stSidebar"] {
+    background-color: #060a17 !important;
+    border-right: 1px solid rgba(0, 242, 254, 0.25) !important;
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.6);
+}
+
+section[data-testid="stSidebar"] .stMarkdown h1, 
+section[data-testid="stSidebar"] .stMarkdown h2, 
+section[data-testid="stSidebar"] .stMarkdown h3 {
+    font-family: 'Rajdhani', sans-serif;
+    color: #00f2fe !important;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+}
+
+/* ========================================================= */
+/* SIDEBAR MULTI-PAGE NAVIGATION BAR STYLING */
+/* ========================================================= */
+
+div[data-testid="stSidebarNav"] {
+    background: transparent !important;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 242, 254, 0.15);
+    margin-bottom: 15px;
+}
+
+div[data-testid="stSidebarNav"] ul li a,
+div[data-testid="stSidebarNavLink"] {
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.04em !important;
+    color: #94a3b8 !important;
+    background: rgba(10, 16, 35, 0.6) !important;
+    border: 1px solid rgba(0, 242, 254, 0.15) !important;
+    border-radius: 10px !important;
+    margin-bottom: 8px !important;
+    padding: 10px 14px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+div[data-testid="stSidebarNav"] ul li a:hover,
+div[data-testid="stSidebarNavLink"]:hover {
+    color: #00f2fe !important;
+    background: rgba(0, 242, 254, 0.12) !important;
+    border-color: rgba(0, 242, 254, 0.45) !important;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.3) !important;
+    transform: translateX(4px);
+}
+
+div[data-testid="stSidebarNav"] ul li a[aria-current="page"],
+div[data-testid="stSidebarNavLink"][aria-current="page"] {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.3) 0%, rgba(138, 43, 226, 0.3) 100%) !important;
+    border: 1px solid #00f2fe !important;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.4) !important;
+    font-weight: 700 !important;
+}
+
+div[data-testid="stSidebarNav"] ul li a[aria-current="page"] span,
+div[data-testid="stSidebarNavLink"][aria-current="page"] span {
+    color: #ffffff !important;
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.5);
+}
+
+/* ========================================================= */
+/* PAGE HORIZONTAL TABS NAVIGATION BAR STYLING */
+/* ========================================================= */
+
+.stTabs [data-baseweb="tab-list"] {
+    background: rgba(8, 14, 30, 0.75) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(0, 242, 254, 0.25) !important;
+    border-radius: 12px !important;
+    padding: 6px 8px !important;
+    gap: 8px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 242, 254, 0.1) !important;
+    margin-bottom: 24px !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.04em !important;
+    color: #94a3b8 !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    border-radius: 8px !important;
+    padding: 10px 22px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    color: #00f2fe !important;
+    background: rgba(0, 242, 254, 0.1) !important;
+    border-color: rgba(0, 242, 254, 0.3) !important;
+    box-shadow: 0 0 12px rgba(0, 242, 254, 0.2) !important;
+}
+
+.stTabs [aria-selected="true"] {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.3) 0%, rgba(138, 43, 226, 0.3) 100%) !important;
+    border: 1px solid #00f2fe !important;
+    box-shadow: 0 0 18px rgba(0, 242, 254, 0.4) !important;
+    font-weight: 700 !important;
+}
+
+.stTabs [data-baseweb="tab-highlight"] {
+    display: none !important;
+}
+
+/* ========================================================= */
+/* FORM INPUTS & SELECTBOXES */
+/* ========================================================= */
+
+div[data-baseweb="select"] > div {
+    background: rgba(10, 16, 35, 0.8) !important;
+    border: 1px solid rgba(0, 242, 254, 0.3) !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    font-family: 'Rajdhani', sans-serif !important;
+}
+
+div[data-baseweb="select"] > div:hover {
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 12px rgba(0, 242, 254, 0.3) !important;
+}
+
+/* Futuristic Cyber Metric / KPI Cards */
+.cyber-card {
+    background: rgba(8, 14, 30, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cyber-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, currentColor, transparent);
+    opacity: 0.6;
+}
+
+.cyber-card-orange {
+    border: 1px solid rgba(255, 107, 53, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 107, 53, 0.15);
+    color: #ff6b35;
+}
+
+.cyber-card-cyan {
+    border: 1px solid rgba(0, 242, 254, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 242, 254, 0.15);
+    color: #00f2fe;
+}
+
+.cyber-card-purple {
+    border: 1px solid rgba(138, 43, 226, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), 0 0 15px rgba(138, 43, 226, 0.15);
+    color: #a855f7;
+}
+
+.cyber-card-blue {
+    border: 1px solid rgba(0, 198, 255, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 198, 255, 0.15);
+    color: #00c6ff;
+}
+
+.cyber-card:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6), 0 0 25px currentColor;
+}
+
+.cyber-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.cyber-card-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+}
+
+.cyber-card-icon {
+    font-size: 1.3rem;
+}
+
+.cyber-card-value {
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.cyber-card-subtitle {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.cyber-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.badge-green {
+    background: rgba(0, 230, 118, 0.15);
+    border: 1px solid #00e676;
+    color: #00e676;
+}
+
+.badge-orange {
+    background: rgba(255, 107, 53, 0.15);
+    border: 1px solid #ff6b35;
+    color: #ff6b35;
+}
+
+.badge-cyan {
+    background: rgba(0, 242, 254, 0.15);
+    border: 1px solid #00f2fe;
+    color: #00f2fe;
+}
+
+/* Business Insight Sci-Fi Box */
+.insight-box {
+    background: rgba(10, 16, 35, 0.85);
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    border-left: 4px solid #00f2fe;
+    border-radius: 10px;
+    padding: 16px 22px;
+    margin: 18px 0 24px 0;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 242, 254, 0.1);
+}
+
+.insight-box p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+/* Sci-Fi Streamlit Buttons */
+.stButton>button {
+    background: linear-gradient(135deg, #00f2fe 0%, #00c6ff 50%, #8a2be2 100%) !important;
+    color: #ffffff !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.05em !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.stButton>button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.6) !important;
+}
+
+/* Glowing Titles */
+h1 {
+    font-family: 'Orbitron', 'Rajdhani', sans-serif !important;
+    background: linear-gradient(90deg, #00f2fe 0%, #a855f7 50%, #ff6b35 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800 !important;
+    letter-spacing: 0.03em !important;
+    margin-bottom: 0.2rem !important;
+}
+
+h2, h3 {
+    font-family: 'Rajdhani', sans-serif !important;
+    color: #00f2fe !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.04em !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #040711;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00f2fe;
+}

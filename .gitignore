@@ -1,0 +1,35 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Environment Variables
+.env
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# SQLite Database Files (Do not commit binary database files to version control)
+database/*.db
+
+# Datasets (Raw data is very large and property-protected; store locally only)
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/README.md
+
+# Application Generated Outputs
+outputs/
+!outputs/README.md
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# IDE Settings
+.vscode/
+.idea/
+*.swp
