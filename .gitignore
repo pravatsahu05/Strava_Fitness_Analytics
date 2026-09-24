@@ -23,8 +23,9 @@ data/processed/*
 !data/processed/README.md
 
 # Application Generated Outputs
-outputs/
+outputs/*
 !outputs/README.md
+!outputs/*.docx
 
 # Jupyter Notebook Checkpoints
 .ipynb_checkpoints/
