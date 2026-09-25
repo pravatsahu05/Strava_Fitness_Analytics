@@ -117,7 +117,10 @@ def run_sql_query(query: str, db_path: Path = DATABASE_PATH) -> tuple[pd.DataFra
         return pd.DataFrame(), msg
 
     if not db_path.exists():
-        return pd.DataFrame(), f"Database not found at {db_path}. Please run src/etl/run_pipeline.py first."
+        if (PROCESSED_DATA_DIR / "daily_master.csv").exists():
+            populate_database_tables(db_path)
+        else:
+            return pd.DataFrame(), f"Database not found at {db_path}. Please run src/etl/run_pipeline.py first."
 
     conn = get_db_connection(db_path)
     try:

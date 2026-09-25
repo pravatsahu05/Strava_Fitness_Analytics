@@ -13,19 +13,15 @@ __pycache__/
 *$py.class
 .pytest_cache/
 
-# SQLite Database Files (Do not commit binary database files to version control)
-database/*.db
-
-# Datasets (Raw data is very large and property-protected; store locally only)
+# Raw Datasets (Raw data is very large ~90MB; store locally only)
 data/raw/*
 !data/raw/README.md
-data/processed/*
-!data/processed/README.md
 
-# Application Generated Outputs
-outputs/*
+# Application Temporary Generated Outputs
+outputs/data_inventory.csv
+outputs/data_cleaning_report.csv
+outputs/data_quality_summary.csv
 !outputs/README.md
-!outputs/*.docx
 
 # Jupyter Notebook Checkpoints
 .ipynb_checkpoints/
