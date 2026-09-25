@@ -26,7 +26,15 @@ def load_daily_master_data() -> pd.DataFrame:
     """Load cached daily_master dataset."""
     file_path = PROCESSED_DATA_DIR / "daily_master.csv"
     if not file_path.exists():
+        try:
+            from src.etl.run_pipeline import run_full_etl_pipeline
+            run_full_etl_pipeline()
+        except Exception as e:
+            return pd.DataFrame()
+
+    if not file_path.exists():
         return pd.DataFrame()
+
     df = safe_read_csv(file_path)
     if not df.empty:
         df["participant_id"] = df["participant_id"].astype(str).str.strip()
@@ -39,7 +47,15 @@ def load_hourly_master_data() -> pd.DataFrame:
     """Load cached hourly_master dataset."""
     file_path = PROCESSED_DATA_DIR / "hourly_master.csv"
     if not file_path.exists():
+        try:
+            from src.etl.run_pipeline import run_full_etl_pipeline
+            run_full_etl_pipeline()
+        except Exception as e:
+            return pd.DataFrame()
+
+    if not file_path.exists():
         return pd.DataFrame()
+
     df = safe_read_csv(file_path)
     if not df.empty:
         df["participant_id"] = df["participant_id"].astype(str).str.strip()
